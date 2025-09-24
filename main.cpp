@@ -9,7 +9,7 @@ using std::endl;
 using std::string;
 using std::vector;
 
-const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful"};
+const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
 
 int main(){
   string input;
