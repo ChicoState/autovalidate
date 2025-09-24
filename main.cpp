@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -23,6 +24,7 @@ int main(){
   {
     return 0;
   }
+  transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
@@ -32,6 +34,7 @@ int main(){
     {
       return 0;
     }
+    transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % 4;
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
