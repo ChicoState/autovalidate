@@ -1,26 +1,22 @@
 name: compile
 
 on:
-  push:
-    branches: "devops"
   pull_request:
     branches: [ main ]
+  push:
+    branches: [ devops ]
 
 jobs:
-  install:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y -f build-essential g++ cmake
-          g++ -std=c++17 main.cpp
-
-
   build:
-    needs: install
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Build project
-        run: make clean && make
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show compiler version
+        run: |
+          g++ --version
+
+      - name: Build (C++17)
+        run: g++ -std=c++17 main.cpp -o app
