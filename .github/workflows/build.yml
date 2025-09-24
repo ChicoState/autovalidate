@@ -2,9 +2,9 @@ name: compile
 
 on:
     push:
-        branches: 'devops'
+        branches: '**'
     pull_request:
-        branches: [main]
+        branches: [cicd]
 
 jobs:
     build:
