@@ -1,0 +1,16 @@
+name: compile #naming the pipeline
+
+on: #dictating when this should run
+  push:
+    branches: [ devops ] #whenever anything is pushed to devops
+  pull_request:
+    branches: [ main ] #whenever a pull_request is for main
+
+jobs:
+  build: #this could've been on the same line as above, but wanted to show that you can have jobs that don't run unless other jobs have run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 #checking out the code from our repository and putting that entire repository into our Docker container
+      - name: Build project #then build the project
+        run: g++ -std=c++17 main.cpp
+
