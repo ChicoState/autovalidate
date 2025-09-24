@@ -21,6 +21,11 @@ int main(){
   getline(cin,input);
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
+  if(input == "nothing" || input == ""){
+    cout << "Oh... okay. Bye!\n";
+    return 0;
+  }
+
   do{
     cout << "What's next?\n";
     getline(cin,input);
