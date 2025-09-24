@@ -30,7 +30,7 @@ int main(){
 
         cout << "What's next?\n";
         getline(cin, input);
-  if(input == nothing){
+  if(input == "nothing"){
         exit(0);
   }//if
 
