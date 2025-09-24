@@ -28,5 +28,9 @@ int main(){
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
 
+  if(input == nothing){
+	exit(0);
+  }//if
+
   return 0;
 }
