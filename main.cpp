@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <string>
 
 using std::cout;
 using std::cin;
@@ -18,15 +19,16 @@ int main(){
   srand(time(0));
   pick = rand() % 4;
   cout << "What are you listening to?\n";
-  getline(cin,input);
-  cout << VALIDATION[pick] << "! Let's listen to more\n";
+  getline(std::cin, input);
 
-  do{
+  while( input != "nothing" )
+  {
+    cout << VALIDATION[pick] << "! Let's listen to more\n";
     cout << "What's next?\n";
-    getline(cin,input);
+    getline(std::cin,input);
     pick = rand() % 4;
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }
 
   return 0;
 }
