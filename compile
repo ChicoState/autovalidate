@@ -1,0 +1,12 @@
+nae: compile
+// how to add push and pull i think. change here two
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Compile C++ Application
+      run: g++ -std=c++17 main.cpp -o my_application
