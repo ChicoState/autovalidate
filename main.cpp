@@ -26,7 +26,7 @@ int main(){
     getline(cin,input);
     pick = rand() % 4;
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }while( input != "nothing" ) break;
 
   return 0;
 }
