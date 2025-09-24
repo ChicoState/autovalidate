@@ -1,10 +1,10 @@
 name :compile
 
-  on:
-    pull_request:
-      branches: [main]
-    push:
-      branches: [devops]
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [devops]
 
 jobs:
   install:
