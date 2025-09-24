@@ -11,7 +11,8 @@ using std::vector;
 
 const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful"};
 
-int main(){
+int main()
+{
   string input;
   int pick;
 
@@ -19,11 +20,22 @@ int main(){
   pick = rand() % 4;
   cout << "What are you listening to?\n";
   getline(cin,input);
+
+  // exiting if the user is listening to nothing
+  // they must be so bored listening to nothing :/
+  if(input == "nothing") { return 0; }
+
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
-  do{
+  do
+  {
     cout << "What's next?\n";
     getline(cin,input);
+
+    // exiting if the user is listening to nothing
+    // they must be so bored listening to nothing :/
+    if(input == "nothing") { return 0; }
+
     pick = rand() % 4;
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
