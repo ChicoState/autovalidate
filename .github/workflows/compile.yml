@@ -1,0 +1,19 @@
+name :compile
+
+  on:
+    pull_request:
+      branches: [main]
+    push:
+      branches: [devops]
+
+jobs:
+  install:
+    run-on: ubuntu-latest
+    steps:
+      -name: install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get -y g++
+  name: compile
+    run: g++ =std=c++17 main.cpp
+      
