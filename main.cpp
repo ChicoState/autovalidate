@@ -18,8 +18,14 @@ int main(){
   srand(time(0));
   pick = rand() % 4;
   cout << "What are you listening to?\n";
-  getline(cin,input);
-  cout << VALIDATION[pick] << "! Let's listen to more\n";
+
+  if (getline(cin,input)) {
+    cout << VALIDATION[pick] << "! Let's listen to more\n";
+  }
+  else if ( input == "nothing") {
+    
+  }
+
 
   do{
     cout << "What's next?\n";
