@@ -1,3 +1,5 @@
+[![Compile CI](https://github.com/laurunion/autovalidate/actions/workflows/compile.yml/badge.svg)](https://github.com/laurunion/autovalidate/actions/workflows/compile.yml)
+
 # autovalidate
 
 I like that app too!
