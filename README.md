@@ -1,6 +1,6 @@
 # autovalidate
 
-UPDATE!
+[![Build C++](https://github.com/andrewruvinsky/andrewruvinsky-autovalidate/actions/workflows/actions.yml/badge.svg)](https://github.com/andrewruvinsky/andrewruvinsky-autovalidate/actions/workflows/actions.yml)
 
 I like that app too!
 
