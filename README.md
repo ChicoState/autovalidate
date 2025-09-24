@@ -1,3 +1,4 @@
+[![Build C++](https://github.com/itsmecharliev/autovalidate/actions/workflows/build.yml/badge.svg)](https://github.com/itsmecharliev/autovalidate/actions/workflows/build.yml)
 # autovalidate
 
 I like that app too!
