@@ -19,6 +19,11 @@ int main(){
   pick = rand() % 4;
   cout << "What are you listening to?\n";
   getline(cin,input);
+
+  if (input == "nothing") {
+    return 0;
+  }
+
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
