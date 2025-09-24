@@ -25,7 +25,6 @@ int main(){
     cout << "What's next?\n";
     getline(cin,input);
     pick = rand() % 4;
-    cout << VALIDATION[pick] << "!\n";
   }
 
   return 0;
