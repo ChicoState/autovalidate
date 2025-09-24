@@ -25,7 +25,7 @@ int main(){
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
-    cout << "What's next?\n";
+    cout << "What's next?\n"; 
     getline(cin,input);
       if(input == "nothing"){
   	return 0;
