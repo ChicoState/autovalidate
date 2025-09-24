@@ -1,6 +1,6 @@
 # autovalidate
 
-[![compile](https://github.com/bacurrah/autovalidate/actions/workflows/actions.yml/badge.svg)](https://github.com/bacurrah/autovalidate/actions/workflows/actions.yml)
+[![compile](https://github.com/ChicoState/autovalidate/actions/workflows/actions.yml/badge.svg)](https://github.com/ChicoState/autovalidate/actions/workflows/actions.yml)
 
 I like that app too!
 
