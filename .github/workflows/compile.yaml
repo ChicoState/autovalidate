@@ -1,0 +1,29 @@
+# We want to create a CI workflow called compile so that it builds the application in an Ubuntu environment with the command:
+#g++ -std=c++17 main.cpp
+
+# It should be triggered to run whenever:
+
+# a pull request has been made for the main branch
+#  any new commits have been pushed to a branch called devops
+
+name: compile
+
+on:
+  push:
+    branches:
+      - devops
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++
+      - name: Compile the application
+        run: g++ -std=c++17 main.cpp
