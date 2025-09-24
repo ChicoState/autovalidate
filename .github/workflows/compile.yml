@@ -1,0 +1,12 @@
+name: compile
+on:
+  push:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: compile code
+        uses: workflows/compile@v1
+          
