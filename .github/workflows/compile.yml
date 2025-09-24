@@ -1,0 +1,16 @@
+name: C++ CI
+
+on:
+  push:
+    branches: [ "main", "ci/cd" ]
+  pull_request:
+    branches: [ "main", "ci/cd" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: g++ -std=c++17 main.cpp
+  
