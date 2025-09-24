@@ -19,9 +19,9 @@ int main(){
   pick = rand() % 4;
   cout << "What are you listening to?\n";
   getline(cin,input);
-  cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
+    cout << VALIDATION[pick] << "! Let's listen to more\n";
     cout << "What's next?\n";
     getline(cin,input);
     pick = rand() % 4;
