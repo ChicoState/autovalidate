@@ -1,0 +1,15 @@
+name: compile
+
+on:
+    push:
+        branches: '**'
+    pull_request:
+        branches: [cicd]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: compile
+              run: g++ -std=c++17 main.cpp
