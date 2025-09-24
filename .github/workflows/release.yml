@@ -1,0 +1,17 @@
+name: Compile
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    branches: ["devops"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Build
+        run: |
+          g++ -std=c++17 main.cpp
