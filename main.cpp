@@ -4,14 +4,16 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <cctype>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
 using std::vector;
+using std::transform;
 
-const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful"};
+const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
 
 int main(){
   string input;
