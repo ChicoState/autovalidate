@@ -18,16 +18,16 @@ int main(){
 
   srand(time(0));
   pick = rand() % 4;
-  cout << "What are you listening to?\n";
-  getline(std::cin, input);
+  std::cout << "What are you listening to?\n";
+  std::getline(std::cin, input);
 
-  while( input != "nothing" )
+  while(input != "nothing")
   {
-    cout << VALIDATION[pick] << "! Let's listen to more\n";
-    cout << "What's next?\n";
-    getline(std::cin,input);
+    std::cout << VALIDATION[pick] << "! Let's listen to more\n";
+    std::cout << "What's next?\n";
+    std::getline(std::cin,input);
     pick = rand() % 4;
-    cout << VALIDATION[pick] << "!\n";
+    std::cout << VALIDATION[pick] << "!\n";
   }
 
   return 0;
