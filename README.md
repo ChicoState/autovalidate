@@ -1,4 +1,5 @@
 # autovalidate
+![Compile]https://github.com/Cbsweet123/autovalidate/actions/workflows/compile.yml/badge.svg
 
 I like that app too!
 
