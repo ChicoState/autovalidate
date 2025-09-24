@@ -1,0 +1,23 @@
+name: compile
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [devops]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++
+
+      - name: compile
+        run: g++ -std=c++17 main.cpp
