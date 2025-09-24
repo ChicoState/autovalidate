@@ -21,7 +21,9 @@ int main(){
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
   getline(cin,input);
-  transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+if(input == "nothing"){
+return 0;
+}
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
