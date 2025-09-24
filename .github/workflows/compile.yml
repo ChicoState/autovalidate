@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: compile code
-        uses: workflows/compile@v1
+        uses: autovalidate/.githubworkflows/compile@v1
           
