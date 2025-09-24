@@ -21,12 +21,13 @@ int main(){
   getline(cin,input);
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
-  do{
+  while (true){
     cout << "What's next?\n";
     getline(cin,input);
+    if (input == "nothing") break;
     pick = rand() % 4;
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }
 
   return 0;
 }
