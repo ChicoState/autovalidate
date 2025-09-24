@@ -32,5 +32,11 @@ int main(){
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
 
+	cout << "What's next?\n";
+	getline(cin, input);
+  if(input == nothing){
+	exit(0);
+  }//if
+
   return 0;
 }
