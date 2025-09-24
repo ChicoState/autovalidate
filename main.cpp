@@ -22,7 +22,7 @@ int main(){
   cout << "What are you listening to?\n";
   getline(cin,input);
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
-  cout << VALIDATION[pick] << "! Let's listen to more\n";
+  
 
   if(input == "nothing" || input == ""){
     cout << "Oh... okay. Bye!\n";
@@ -30,6 +30,8 @@ int main(){
     return 0;
   }
 
+  cout << VALIDATION[pick] << "! Let's listen to more\n";
+  
   do{
     cout << "What's next?\n";
     getline(cin,input);
