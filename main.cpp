@@ -21,15 +21,25 @@ int main(){
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
   getline(cin,input);
+
+  if(input == "nothing") // exits if the initial answer is nothing
+	return 0;
+
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
     cout << "What's next?\n";
     getline(cin,input);
+
+    pick = rand() % 4;
+    if(input != "nothing")   //added this to prevent one of the validation prompts from occuring after canceling	
+    	cout << VALIDATION[pick] << "!\n";
     transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
+
   }while( input != "nothing" );
 
   return 0;
