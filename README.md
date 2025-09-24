@@ -1,4 +1,5 @@
 # autovalidate
+[![C++ CI](https://github.com/ChicoState/autovalidate/actions/workflows/compile.yml/badge.svg)](https://github.com/ChicoState/autovalidate/actions/workflows/compile.yml)
 
 I like that app too!
 
