@@ -20,13 +20,13 @@ int main(){
   cout << "What are you listening to?\n";
   getline(cin,input);
 
-  do{
+  while ( input != "nothing" ){
     cout << VALIDATION[pick] << "! Let's listen to more\n";
     cout << "What's next?\n";
     getline(cin,input);
     pick = rand() % 4;
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }
 
   return 0;
 }
