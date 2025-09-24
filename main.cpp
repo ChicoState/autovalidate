@@ -26,6 +26,7 @@ int main(){
 
   if(input == "nothing" || input == ""){
     cout << "Oh... okay. Bye!\n";
+    cout << "Testing for actions.yml agai\n";
     return 0;
   }
 
