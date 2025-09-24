@@ -1,21 +1,15 @@
-name: Build C++
+name: compile
 
 on:
     push:
         branches: '**'
     pull_request:
-        branches: [cicd]
+        branches: [main]
 
 jobs:
-    compile:
-        runs-on: ubuntu-latest
-        steps:
-            - name: compile
-              run: g++ -std=c++17 main.cpp
     build:
-        needs: compile
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - name: Build project
-              run: make clean && make
+            - name: compile
+              run: g++ -std=c++17 main.cpp
