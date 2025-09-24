@@ -27,10 +27,12 @@ int main(){
   do{
     cout << "What's next?\n";
     getline(cin,input);
-    transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
-    pick = rand() % VALIDATION.size();
+    if(input == "nothin"){
+      break;
+    }
+    pick = rand() % 4;
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }while(true);
 
   return 0;
 }
