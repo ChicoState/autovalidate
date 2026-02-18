@@ -3,6 +3,7 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -23,14 +24,22 @@ int main(){
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
   input = get_input_in_lowercase();
+
+  if (input == "nothing") {
+    return 0;
+  }
+
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
-  do{
+  while( input != "nothing" ) {
     cout << "What's next?\n";
     input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
+    if (input == "nothing") {
+      return 0;
+    }
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }
 
   return 0;
 }
