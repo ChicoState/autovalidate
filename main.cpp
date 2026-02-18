@@ -12,6 +12,8 @@ using std::vector;
 using std::transform;
 const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
 
+string get_input_in_lowercase();
+
 int main(){
   string input;
   int pick;
@@ -23,6 +25,7 @@ int main(){
 
   
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+  input = get_input_in_lowercase();
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do {
@@ -31,6 +34,7 @@ int main(){
     transform(input.begin(), input.end(), input.begin(),
              [](unsigned char c){ return std::tolower(c); });
 
+    input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
 
@@ -39,4 +43,13 @@ int main(){
 return 0;
 
 
+}
+  return 0;
+}
+
+string get_input_in_lowercase(){
+  string in;
+  getline(cin,in);
+  transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
+  return in;
 }
