@@ -14,6 +14,8 @@ using std::transform;
 
 const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
 
+string get_input_in_lowercase();
+
 int main(){
   string input;
   int pick;
@@ -33,8 +35,7 @@ int main(){
 
   do{
     cout << "What's next?\n";
-    getline(cin,input);
-    transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+    input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
