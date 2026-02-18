@@ -14,6 +14,8 @@ using std::transform;
 
 const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
 
+string get_input_in_lowercase();
+
 int main(){
     string input;
     int pick;
