@@ -3,6 +3,8 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <ranges>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -28,6 +30,9 @@ int main(){
   do{
     cout << "What's next?\n";
     input = get_input_in_lowercase();
+    if(input == "nothing"){
+      return 0;
+    }
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
