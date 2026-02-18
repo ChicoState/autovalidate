@@ -4,6 +4,7 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using std::cin;
 using std::cout;
