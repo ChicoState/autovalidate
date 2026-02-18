@@ -4,7 +4,6 @@
 #include <vector>
 #include <cctype>
 #include <algorithm>
-#include <cstdlib>
 
 using namespace std;
 using std::cout;
