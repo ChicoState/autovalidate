@@ -18,4 +18,4 @@ jobs:
       - name: Run tests
         run: |
           echo "nothing" | ./a.out
-          echo "Radiohead" | ./a.out
+          printf "Radiohead\nnothing\n" | ./a.out
