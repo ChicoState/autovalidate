@@ -1,3 +1,4 @@
+[![Build C++](https://github.com/ktoledo18/autovalidate/actions/workflows/compile.yaml/badge.svg)](https://github.com/ktoledo18/autovalidate/actions/workflows/compile.yaml)
 # autovalidate
 
 I like that app too!
