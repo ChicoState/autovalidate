@@ -1,4 +1,4 @@
-name: Build C++
+name: compile
 
 on:
   push:
