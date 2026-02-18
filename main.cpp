@@ -26,12 +26,12 @@ int main(){
   input = get_input_in_lowercase();
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
-  do{
+  while( input != "nothing" ){
     cout << "What's next?\n";
     input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  };
 
   return 0;
 }
