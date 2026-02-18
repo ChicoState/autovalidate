@@ -5,6 +5,13 @@
 #include <cctype>
 #include <algorithm>
 
+using std::cout;
+using std::cin;
+using std::endl;
+using std::string;
+using std::vector;
+using std::transform;
+
 const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
 
 string get_input_in_lowercase();
