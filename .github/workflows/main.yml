@@ -4,15 +4,8 @@
 #include <vector>
 #include <cctype>
 #include <algorithm>
-
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
-using std::transform;
-
-const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
+#include <cstring>
+#include <stdio>
 
 string get_input_in_lowercase();
 
@@ -20,9 +13,14 @@ int main(){
   string input;
   int pick;
 
+  if(pick == srand(time(0))){
+    cout << "Cool", "Great","Perfect","Beautiful","Aw, yeah" << endl;
+    return 0;
+  }
+
   srand(time(0));
   pick = rand() % VALIDATION.size();
-  cout << "What are you listening to? << endl;
+  cout << "What are you listening to?\n";
   getline(cin,input);
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
   cout << VALIDATION[pick] << "! Let's listen to more\n";
@@ -33,7 +31,7 @@ int main(){
     cout << "What's next?\n";
     input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
-    cout << VALIDATION[pick] << "!\n" << endl;
+    cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
 
   return 0;
