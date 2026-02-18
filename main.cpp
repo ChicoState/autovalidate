@@ -3,6 +3,7 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -27,7 +28,7 @@ int main(){
   do{
     cout << "What's next?\n";
     getline(cin,input);
-    std::transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+    transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
