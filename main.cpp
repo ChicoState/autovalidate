@@ -24,6 +24,8 @@ int main(){
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
   input = get_input_in_lowercase();
+  if (input == "nothing") 
+    return 1;
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
