@@ -43,3 +43,4 @@ string get_input_in_lowercase(){
   transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
   return in;
 }
+
