@@ -23,7 +23,13 @@ int main(){
   srand(time(0));
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
+<<<<<<< HEAD
   input = get_input_in_lowercase();
+=======
+  getline(cin,input);
+  transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+  if (input == "nothing" || input.empty()) return 0;
+>>>>>>> e174f19 (Fixed the nothing on first input)
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
@@ -31,7 +37,9 @@ int main(){
     input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }while( input != "nothing" && !input.empty() );
+
+
 
   return 0;
 }
