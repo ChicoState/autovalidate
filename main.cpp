@@ -17,28 +17,28 @@ const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, ye
 string get_input_in_lowercase();
 
 int main(){
-  string input;
-  int pick;
+    string input;
+    int pick;
 
-  srand(time(0));
-  pick = rand() % VALIDATION.size();
-  cout << "What are you listening to?\n";
-  input = get_input_in_lowercase();
-  cout << VALIDATION[pick] << "! Let's listen to more\n";
-
-  do{
-    cout << "What's next?\n";
-    input = get_input_in_lowercase();
+    srand(time(0));
     pick = rand() % VALIDATION.size();
-    cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+    cout << "What are you listening to?\n";
+    getline(cin,input);
+    if (input == "nothing") {
+        return 0;
+    }
 
-  return 0;
-}
+    transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+    cout << VALIDATION[pick] << "! Let's listen to more\n";
 
-string get_input_in_lowercase(){
-  string in;
-  getline(cin,in);
-  transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
-  return in;
+
+    do{
+        cout << "What's next?\n";
+        getline(cin,input);
+        transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+        pick = rand() % VALIDATION.size();
+        cout << VALIDATION[pick] << "!\n";
+    }while( input != "nothing" );
+
+    return 0;
 }
