@@ -1,4 +1,5 @@
 # autovalidate
+[![compile](https://github.com/EathanT/autovalidate/actions/workflows/compile.yml/badge.svg)](https://github.com/EathanT/autovalidate/actions/workflows/compile.yml)
 
 I like that app too!
 
