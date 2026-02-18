@@ -22,14 +22,14 @@ int main(){
   cout << "What are you listening to?\n";
   getline(cin,input);
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
-  cout << VALIDATION[pick] << "! Let's listen to more\n";
+  cout << VALIDATION[pick] << "! Let's listen to more\n" << endl;
 
   do{
     cout << "What's next?\n";
     getline(cin,input);
     transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % VALIDATION.size();
-    cout << VALIDATION[pick] << "!\n";
+    cout << VALIDATION[pick] << "!\n" << endl;
   }while( input != "nothing" );
 
   return 0;
