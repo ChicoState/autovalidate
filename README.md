@@ -1,3 +1,5 @@
+![build](https://github.com/jbcarlock/autovalidate/actions/workflows/build.yml/badge.svg)
+
 # autovalidate
 
 I like that app too!
