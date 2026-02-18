@@ -4,6 +4,7 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -13,6 +14,8 @@ using std::vector;
 using std::transform;
 
 const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
+
+string get_input_in_lowercase();
 
 int main(){
   string input;
@@ -27,11 +30,17 @@ int main(){
   while( input != "nothing"){
     cout << VALIDATION[pick] << "! Let's listen to more\n";
     cout << "What's next?\n";
-    getline(cin,input);
-    transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+    input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
   }
 
   return 0;
+}
+
+string get_input_in_lowercase(){
+  string in;
+  getline(cin,in);
+  transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
+  return in;
 }
