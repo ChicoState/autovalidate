@@ -7,13 +7,16 @@
 #include <cstring>
 #include <stdio>
 
-const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
-
 string get_input_in_lowercase();
 
 int main(){
   string input;
   int pick;
+
+  if(pick == srand(time(0))){
+    cout << "Cool", "Great","Perfect","Beautiful","Aw, yeah" << endl;
+    return 0;
+  }
 
   srand(time(0));
   pick = rand() % VALIDATION.size();
