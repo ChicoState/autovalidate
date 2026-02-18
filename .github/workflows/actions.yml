@@ -10,4 +10,5 @@ jobs:
   compile:
     runs-on: ubuntu-latest
     steps:
+      - name: Compile
         run: g++ -std=c++17 main.cpp
