@@ -3,6 +3,8 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+// Fix : added algorithm header for transform funciton
+#include <algorithm>
 
 using std::cout;
 using std::cin;
