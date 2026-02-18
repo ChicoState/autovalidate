@@ -1,6 +1,6 @@
 # autovalidate
 
-[![Build Status](https://github.com/DilyCantCode/autovalidate/actions/workflows/actions.yml/badge.svg?branch=main)](https://github.com/DilyCantCode/autovalidate/actions)
+[![Build C++](https://github.com/DilyCantCode/autovalidate/actions/workflows/actions.yml/badge.svg)](https://github.com/DilyCantCode/autovalidate/actions/workflows/actions.yml)
 
 I like that app too!
 
