@@ -1,4 +1,5 @@
 # autovalidate
+[![compile](https://github.com/ChicoState/autovalidate/actions/workflows/build.yml/badge.svg)](https://github.com/ChicoState/autovalidate/actions/workflows/build.yml)
 
 I like that app too!
 
