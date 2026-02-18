@@ -1,1 +1,13 @@
-g++ -std=c++17 main.cpp
+name: C++ compile
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: [actions/checkout@v4](https://github.com)
+    - name: Configure project
+      run: g++ -std=c++17 main.cpp
+    
