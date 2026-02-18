@@ -1,3 +1,5 @@
+[![.github/workflows/build.yml](https://github.com/RezDead/autovalidate/actions/workflows/build.yml/badge.svg)](https://github.com/RezDead/autovalidate/actions/workflows/build.yml)
+
 # autovalidate
 
 I like that app too!
