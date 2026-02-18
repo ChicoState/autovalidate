@@ -23,10 +23,10 @@ int main(){
   getline(cin,input);
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
   cout << VALIDATION[pick] << "! Let's listen to more\n";
+  cout << "What's next?\n";
+  getline(cin, input);
 
   do{
-    cout << "What's next?\n";
-    getline(cin,input);
     transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
