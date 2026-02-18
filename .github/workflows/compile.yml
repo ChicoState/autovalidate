@@ -1,0 +1,16 @@
+name: Build C++
+
+on:
+  push: devops
+  pull_request: main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v4
+      -name: Build
+      run: g++ -std=c++17 main.cpp -o main
+      -name: Run
+      run: ./main
