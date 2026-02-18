@@ -3,6 +3,7 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -22,6 +23,11 @@ int main(){
   cout << "What are you listening to?\n";
   getline(cin,input);
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+  if (input == "nothing"){
+    return 0;
+  } else {
+    cout << "Nothing? That's not very good for you.\n";
+  }
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
