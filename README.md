@@ -1,3 +1,5 @@
+[![compile](https://github.com/thale-chico/autovalidate/actions/workflows/build.yml/badge.svg)](https://github.com/thale-chico/autovalidate/actions/workflows/build.yml)
+
 # autovalidate
 
 I like that app too!
