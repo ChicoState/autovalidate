@@ -25,20 +25,20 @@ int main(){
   cout << "What are you listening to?\n";
   input = get_input_in_lowercase();
   cout << VALIDATION[pick] << "! Let's listen to more\n";
+  if(input == "nothing"){
+    return 0;
+  }
 
   do{
     cout << "What's next?\n";
-    input = get_input_in_lowercase();
+    getline(cin,input);
+    if(input == "nothing"){
+      return 0;
+    }
+    transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
 
   return 0;
-}
-
-string get_input_in_lowercase(){
-  string in;
-  getline(cin,in);
-  transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
-  return in;
 }
