@@ -22,7 +22,9 @@ int main(){
     cout << "What are you listening to?\n";
     getline(cin, input);
 
-    if (input.empty()) return 0;  // <-- terminate immediately
+    // Terminate
+    if (input.empty())
+      return 0;
 
     transform(input.begin(), input.end(), input.begin(),
               [](unsigned char c){ return std::tolower(c); });
@@ -34,7 +36,9 @@ int main(){
         cout << "What's next?\n";
         getline(cin, input);
 
-        if (input.empty()) return 0;  // <-- terminate immediately
+        // Terminate
+        if (input.empty())
+          return 0;
 
         transform(input.begin(), input.end(), input.begin(),
                   [](unsigned char c){ return std::tolower(c); });
