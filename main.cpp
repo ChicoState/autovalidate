@@ -24,6 +24,7 @@ int main(){
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
   input = get_input_in_lowercase();
+  if( input == "nothing" ) {return 0;}
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
   do{
@@ -42,3 +43,4 @@ string get_input_in_lowercase(){
   transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
   return in;
 }
+
