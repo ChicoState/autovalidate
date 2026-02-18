@@ -2,9 +2,9 @@ name: compile
 
 on:
   pull_request:
-    branches: [ main, autovalidate-quiz ]
-  push:
     branches: [ main ]
+  push:
+    branches: [ devops ]
 
 jobs:
   build:
