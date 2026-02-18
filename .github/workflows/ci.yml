@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Compile
+        run: g++ -std=c++17 main.cpp
+
+      - name: Run tests
+        run: |
+          echo "nothing" | ./a.out
+          echo "Radiohead" | ./a.out
