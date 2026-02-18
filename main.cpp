@@ -3,6 +3,7 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -30,7 +31,14 @@ int main(){
     transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }while( input != "nothing" )
+  {
+     if (input == "nothing")
+    {
+      break;
+    }
+
+  };
 
   return 0;
 }
