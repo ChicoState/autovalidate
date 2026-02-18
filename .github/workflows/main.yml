@@ -4,6 +4,8 @@
 #include <vector>
 #include <cctype>
 #include <algorithm>
+#include <cstring>
+#include <stdio>
 
 const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
 
