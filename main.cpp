@@ -32,7 +32,8 @@ int main(){
     cout << "What's next?\n";
     input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
-    cout << VALIDATION[pick] << "!\n";
+    if( input != "nothing")
+      cout << VALIDATION[pick] << "!\n";
   };
 
   return 0;
