@@ -1,9 +1,9 @@
 name: Build C++
 
 on:
-  push:
+  pull_request:
     branches: [ main ]
-  commit:
+  push:
     branches: [ devops ]
 
 jobs:
