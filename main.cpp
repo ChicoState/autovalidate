@@ -23,15 +23,28 @@ int main(){
   srand(time(0));
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
+
+  getline(cin,input);
+  transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
+  cout << VALIDATION[pick] << "! Let's listen to more friend\n";
+
   input = get_input_in_lowercase();
   cout << VALIDATION[pick] << "! Let's listen to more\n";
+
 
   do{
     cout << "What's next?\n";
     input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }while( input != "nothing" )
+  {
+     if (input == "nothing")
+    {
+      break;
+    }
+
+  };
 
   return 0;
 }
