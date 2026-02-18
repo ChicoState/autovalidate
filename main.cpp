@@ -5,33 +5,41 @@
 #include <cctype>
 #include <algorithm>
 
-using std::cout;
 using std::cin;
+using std::cout;
 using std::endl;
 using std::string;
-using std::vector;
 using std::transform;
+using std::vector;
 
-const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, yeah"};
+const vector<string> VALIDATION = {"Cool", "Great", "Perfect", "Beautiful", "Aw, yeah"};
 
 string get_input_in_lowercase();
 
 int main(){
   string input;
   int pick;
-
+  
   srand(time(0));
   pick = rand() % VALIDATION.size();
   cout << "What are you listening to?\n";
+  
   input = get_input_in_lowercase();
+
+  if (input == "nothing")
+    return 0;
+
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
-  do{
+  do
+  {
     cout << "What's next?\n";
+    
     input = get_input_in_lowercase();
+    
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  } while (input != "nothing");
 
   return 0;
 }
