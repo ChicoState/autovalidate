@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib>
+#include <algorithm>
 #include <ctime>
 #include <vector>
 #include <cctype>
@@ -22,15 +23,15 @@ int main(){
   cout << "What are you listening to?\n";
   getline(cin,input);
   transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
-  cout << VALIDATION[pick] << "! Let's listen to more\n";
-
-  do{
+  
+  while( input != "nothing"){
+    cout << VALIDATION[pick] << "! Let's listen to more\n";
     cout << "What's next?\n";
     getline(cin,input);
     transform(input.begin(), input.end(), input.begin(), [](unsigned char c){ return std::tolower(c); });
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  }
 
   return 0;
 }
