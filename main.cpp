@@ -25,6 +25,12 @@ int main(){
   input = get_input_in_lowercase();
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
+
+  // Fix : check if input is "nothing" before entering the loop
+  if (input == "nothing") {
+    return 0;
+  }
+  
   do{
     cout << "What's next?\n";
     input = get_input_in_lowercase();
