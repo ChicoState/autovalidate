@@ -3,6 +3,7 @@
 #include <ctime>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using std::cout;
 using std::cin;
@@ -33,11 +34,4 @@ int main(){
   }while( input != "nothing" );
 
   return 0;
-}
-
-string get_input_in_lowercase(){
-  string in;
-  getline(cin,in);
-  transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
-  return in;
 }
