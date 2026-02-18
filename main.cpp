@@ -32,5 +32,10 @@ int main(){
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
 
+  if (input == "nothing"){
+    cout << "Want me to recommend some music?\n";
+    return 0;
+  }
+
   return 0;
 }
