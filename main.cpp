@@ -25,6 +25,9 @@ int main(){
   cout << "What are you listening to?\n";
   input = get_input_in_lowercase();
   cout << VALIDATION[pick] << "! Let's listen to more\n";
+  if (input == "nothing") {
+	  return EXIT_SUCCESS;
+  }
 
   do{
     cout << "What's next?\n";
@@ -33,12 +36,7 @@ int main(){
     cout << VALIDATION[pick] << "!\n";
   }while( input != "nothing" );
 
-  return 0;
-}
 
-string get_input_in_lowercase(){
-  string in;
-  getline(cin,in);
-  transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
-  return in;
+
+  return 0;
 }
