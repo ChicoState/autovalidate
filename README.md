@@ -1,5 +1,21 @@
-# autovalidate
+# Autovalidate
 
-I like that app too!
+[![Build](https://github.com/ChicoState/autovalidate/actions/workflows/build.yml/badge.svg)](https://github.com/ChicoState/autovalidate/actions/workflows/build.yml)
 
-This repo is compatible with the [cpp-container docker container](https://github.com/ChicoState/cpp-container).
+This is a simple C++ command line application that agrees with all your hot takes.
+
+## Getting Started
+
+This project is compatible with the [cpp-container Docker image](https://github.com/ChicoState/cpp-container).
+
+### Launching in container
+
+Run it with a volume mounted to the current source code:
+```
+docker run -v "$(pwd)":/usr/src -it cpp-container
+```
+
+Or launch an interactive container:
+```
+docker run -v "$(pwd)":/usr/src -it cpp-container sh
+```
