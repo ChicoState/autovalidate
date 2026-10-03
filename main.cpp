@@ -16,7 +16,8 @@ const vector <string> VALIDATION = {"Cool","Great","Perfect","Beautiful","Aw, ye
 
 string get_input_in_lowercase();
 
-int main(){
+int main()
+{
   string input;
   int pick;
 
@@ -26,17 +27,19 @@ int main(){
   input = get_input_in_lowercase();
   cout << VALIDATION[pick] << "! Let's listen to more\n";
 
-  do{
+  do
+  {
     cout << "What's next?\n";
     input = get_input_in_lowercase();
     pick = rand() % VALIDATION.size();
     cout << VALIDATION[pick] << "!\n";
-  }while( input != "nothing" );
+  } while( input != "nothing" );
 
   return 0;
 }
 
-string get_input_in_lowercase(){
+string get_input_in_lowercase()
+{
   string in;
   getline(cin,in);
   transform(in.begin(), in.end(), in.begin(), [](unsigned char c){ return std::tolower(c); });
